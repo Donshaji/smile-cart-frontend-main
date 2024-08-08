@@ -34,7 +34,7 @@ const Carousel = () => {
     timerRef.current = setInterval(handleNext, 3000);
 
     return () => clearInterval(timerRef.current);
-  }, []);
+  }, [handleNext]); // Include handleNext in the dependency array
 
   return (
     <div className="flex flex-col items-center">
